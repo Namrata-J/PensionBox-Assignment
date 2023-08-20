@@ -1,0 +1,3 @@
+const ERROR_OCCURRED = "ERROR_OCCURRED";
+
+export { ERROR_OCCURRED };
