@@ -3,10 +3,16 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
+
   return (
-    <Card sx={{ width: "16rem" }}>
+    <Card
+      sx={{ width: "16rem", cursor: "pointer" }}
+      onClick={() => navigate(`/product/${product?.id}`)}
+    >
       <CardMedia
         sx={{ height: "22rem" }}
         image={product?.image}

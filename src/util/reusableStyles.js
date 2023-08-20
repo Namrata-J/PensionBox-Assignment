@@ -5,6 +5,7 @@ const headerStyle = {
   boxShadow: "none",
   display: "flex",
   flexDirection: "row",
+  gap: "1rem",
   height: "8vh",
   position: "fixed",
   p: "0.8rem",
@@ -16,7 +17,7 @@ const searchBoxWrapperStyle = {
   border: "1px solid var(--grayShade1)",
   boxShadow: "none",
   display: "flex",
-  p: "2px 8px",
+  p: { xs: "1px 4px", sm: "2px 8px" },
   width: "20rem",
 };
 
@@ -34,6 +35,7 @@ const sideBarWrapperStyle = {
   width: "15rem",
   p: "1rem",
   overflowY: "scroll",
+  position: { xs: "absolute", lg: "relative" },
 };
 
 const fullWidthAndHeightFlexCenterStyle = {
@@ -56,6 +58,11 @@ const productListingContainerStyle = {
   overflowY: "scroll",
 };
 
+const productDetailDescriptionStyle = {
+  color: "otherColors.grayShade3",
+  fontSize: "0.9rem",
+};
+
 export {
   headerStyle,
   searchBoxWrapperStyle,
@@ -63,4 +70,5 @@ export {
   fullWidthAndHeightFlexCenterStyle,
   sideBarWrapperStyle,
   productListingContainerStyle,
+  productDetailDescriptionStyle,
 };

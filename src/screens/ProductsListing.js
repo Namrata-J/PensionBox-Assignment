@@ -34,7 +34,7 @@ const ProductsListing = () => {
         </Box>
       ) : (
         <Box sx={{ height: "100vh" }}>
-          <Header />
+          <Header showHamburger={true} />
           <Box
             sx={{
               display: "flex",
