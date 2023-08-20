@@ -36,9 +36,24 @@ const filterByCategoryFunc = (state, data) => {
       );
 };
 
+const filterBySearchFunc = (state, data) => {
+  return state.filterBySearchVal === ""
+    ? data
+    : data.filter(
+        (product) =>
+          product.title
+            .toLowerCase()
+            .includes(state.filterBySearchVal.toLowerCase()) ||
+          product.description
+            .toLowerCase()
+            .includes(state.filterBySearchVal.toLowerCase())
+      );
+};
+
 export {
   sortByPriceFunc,
   sortByRatingFunc,
   filterByPriceFunc,
+  filterBySearchFunc,
   filterByCategoryFunc,
 };

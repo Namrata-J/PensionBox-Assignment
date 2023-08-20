@@ -5,6 +5,7 @@ const initialState = {
   sortByRatingVal: "",
   filterByPriceVal: 100000,
   filterByCategoryVal: [],
+  filterBySearchVal: "",
 };
 
 const filterAndSortSlice = createSlice({
@@ -34,6 +35,9 @@ const filterAndSortSlice = createSlice({
         state.filterByCategoryVal.splice(index, 1);
       }
     },
+    setFilterBySearchVal: (state, action) => {
+      state.filterBySearchVal = action.payload;
+    },
   },
 });
 
@@ -43,6 +47,7 @@ export const {
   setSortByPriceVal,
   setSortByRatingVal,
   setFilterByPriceVal,
+  setFilterBySearchVal,
   setFilterByCategoryVal,
 } = actions;
 export { reducer };

@@ -4,6 +4,7 @@ import {
   sortByPriceFunc,
   sortByRatingFunc,
   filterByPriceFunc,
+  filterBySearchFunc,
   filterByCategoryFunc,
 } from "../util/filterAndSortFunc";
 import { useSelector } from "react-redux";
@@ -18,7 +19,10 @@ const ProductListingContainer = () => {
     state,
     filterByPriceFunc(
       state,
-      sortByRatingFunc(state, sortByPriceFunc(state, products))
+      sortByRatingFunc(
+        state,
+        sortByPriceFunc(state, filterBySearchFunc(state, products))
+      )
     )
   );
 
