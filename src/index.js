@@ -1,13 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import App from "./App";
+import React from "react";
+import { Provider } from "react-redux";
+import ReactDOM from "react-dom/client";
+import { store } from "./redux/app/store";
+import { SideBarProvider } from "./contexts";
+import reportWebVitals from "./reportWebVitals";
+import { AppThemeProvider } from "./providers/ThemeProvider";
+import { BrowserRouter as ReactRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ReactRouter>
+      <Provider store={store}>
+        <AppThemeProvider>
+          <SideBarProvider>
+            <App />
+          </SideBarProvider>
+        </AppThemeProvider>
+      </Provider>
+    </ReactRouter>
   </React.StrictMode>
 );
 
