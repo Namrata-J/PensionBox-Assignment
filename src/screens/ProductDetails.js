@@ -42,6 +42,7 @@ const ProductDetails = () => {
             sx={{
               minWidth: { xs: "18rem", sm: "15rem", md: "20rem" },
               minHeight: { xs: "26rem", sm: "25rem", md: "30rem" },
+              height: { xs: "26rem", sm: "25rem", md: "30rem" },
               p: 1,
             }}
           >
